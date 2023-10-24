@@ -1,0 +1,121 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    margin-right: 20px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+header h1, footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+header a, footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Стили для подложки */
+.video-background {
+    filter: blur(5px); /* Размытие на 50% */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -99;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+/* Опционально: убедитесь, что header и footer не перекрывают видео */
+header, footer {
+    position: relative;
+    z-index: 1;
+}
+        .centered-content {
+            position: absolute;
+            top: 50%; /* Положение по вертикали в середине экрана */
+            left: 50%; /* Положение по горизонтали в середине экрана */
+            transform: translate(-50%, -50%); /* Сдвигаем элемент обратно на 50% его собственной ширины и высоты */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            max-height: 500px;
+        }
+        .centered-content img {
+            max-width: 100%;
+            max-height: 100%;
+        }
